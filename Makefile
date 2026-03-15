@@ -12,6 +12,9 @@ all: results/horse_pop_plot_largest_sd.png \
 docs/index.html: reports/qmd_example.html
 	mkdir -p docs
 	cp reports/qmd_example.html docs/index.html
+	mkdir -p docs/results
+	cp -r results/*.png docs/results/
+	sed -i '' 's|\.\./results/|results/|g' docs/index.html
 
 docs: docs/index.html
 
