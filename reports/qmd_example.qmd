@@ -10,6 +10,8 @@ editor: source
 ---
 
 ```{r}
+#| echo: false
+#| warning: false
 library(tidyverse)
 ```
 
@@ -51,6 +53,8 @@ We present the standard deviations in Table [@tbl:horses_sd].
 ```{r}
 #| label: tbl:horses_sd
 #| tbl-cap: "Sample standard deviation of historical (1906-1972) horse populations for each Canadian province."
+#| echo: false
+#| warning: false
 horses_sd_table <- read_csv("../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
 knitr::kable(horses_sd_table)
