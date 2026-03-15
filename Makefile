@@ -5,9 +5,15 @@ all: results/horse_pop_plot_largest_sd.png \
 	results/horse_pops_plot.png \
 	results/horses_spread.csv \
 	reports/qmd_example.html \
-	reports/qmd_example.pdf
+	reports/qmd_example.pdf \
+	docs/index.html
 
+# build report into docs/ for GitHub Pages
+docs/index.html: reports/qmd_example.html
+	mkdir -p docs
+	cp reports/qmd_example.html docs/index.html
 
+docs: docs/index.html
 
 # generate figures and objects for report
 results/horse_pop_plot_largest_sd.png results/horse_pops_plot.png results/horses_spread.csv: source/generate_figures.R
