@@ -4,7 +4,8 @@ author: "Tiffany Timbers & Jordan Bourak"
 format:
   html:
     toc: true
-    toc-depth: 3
+    html-math-method: katex
+    css: styles.css
 editor: source
 ---
 
@@ -70,3 +71,4 @@ Figure 2: Horse populations for the province with the largest standard deviation
 In Figure 2 we zoom in and look at the province of ???, which had the largest spread of values in terms of standard deviation.
 
 ## References
+bibliography: references.bib
